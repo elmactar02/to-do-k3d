@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet DevOps - ToDo-List sur Kubernetes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+    }
+    header, section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    header {
+      text-align: center;
+      background-color: #1e293b;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      border-bottom: 2px solid #38bdf8;
+      padding-bottom: 5px;
+    }
+    .image {
+      margin: 30px 0;
+      text-align: center;
+    }
+    .image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .stack-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .stack-table th, .stack-table td {
+      border: 1px solid #334155;
+      padding: 12px;
+      text-align: left;
+    }
+    .stack-table th {
+      background-color: #1e293b;
+    }
+    footer {
+      background-color: #1e293b;
+      padding: 20px;
+      text-align: center;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Projet DevOps : Déploiement ToDo-List sur Kubernetes</h1>
+    <p>CI/CD, monitoring, reverse proxy et cache dans un cluster local</p>
+  </header>
+
+  <section>
+    <h2>🎯 Contexte & Objectif</h2>
+    <p>L’objectif de ce projet était de déployer une application web de type ToDo-List en simulant un environnement de production local avec des clusters Kubernetes (Minikube puis K3d), tout en automatisant les livraisons et assurant l’observabilité.</p>
+  </section>
+
+  <section>
+    <h2>🧰 Stack technique</h2>
+    <table class="stack-table">
+      <tr><th>Catégorie</th><th>Outils</th></tr>
+      <tr><td>CI/CD</td><td>Jenkins</td></tr>
+      <tr><td>Conteneurisation</td><td>Docker, Kubernetes (Minikube & K3d)</td></tr>
+      <tr><td>Reverse Proxy</td><td>Nginx</td></tr>
+      <tr><td>Cache</td><td>Redis</td></tr>
+      <tr><td>Monitoring</td><td>Prometheus, Grafana</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>⚙️ Fonctionnement</h2>
+    <ul>
+      <li>Pipeline Jenkins déclenchée à chaque commit : build, push, déploiement Kubernetes</li>
+      <li>Configuration de Nginx pour le routage des requêtes</li>
+      <li>Redis intégré pour améliorer les performances</li>
+      <li>Prometheus et Grafana pour la collecte de métriques et la visualisation</li>
+    </ul>
+    <div class="image">
+      <img src="chemin/vers/image-pipeline.png" alt="Illustration pipeline Jenkins" />
+    </div>
+  </section>
+
+  <section>
+    <h2>📊 Résultats</h2>
+    <ul>
+      <li>Déploiement automatisé en local sur Minikube & K3d</li>
+      <li>Performance améliorée via Redis</li>
+      <li>Monitoring complet avec dashboards Grafana</li>
+    </ul>
+    <div class="image">
+      <img src="chemin/vers/grafana-dashboard.png" alt="Dashboard Grafana" />
+    </div>
+  </section>
+
+  <section>
+    <h2>🔎 Améliorations futures</h2>
+    <ul>
+      <li>Ajout de tests automatisés dans la CI</li>
+      <li>Intégration de gestion de secrets</li>
+      <li>Déploiement sur cloud (EKS, GKE...)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🔗 Liens</h2>
+    <ul>
+      <li><a href="#" style="color: #38bdf8;">Code source GitHub</a></li>
+      <li><a href="#" style="color: #38bdf8;">Vidéo de démonstration</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 - Portfolio DevOps de Mactar Gueye
+  </footer>
+</body>
+</html>
